@@ -1,0 +1,6 @@
+<h2>Edit vote session</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: vote_session_path(@conn, :update, @vote_session) %>
+
+<%= link "Back", to: vote_session_path(@conn, :index) %>

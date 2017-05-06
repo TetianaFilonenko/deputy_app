@@ -1,0 +1,28 @@
+<h2>Listing vote sessions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>File</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for vote_session <- @vote_sessions do %>
+    <tr>
+      <td><%= vote_session.name %></td>
+      <td><%= vote_session.file_id %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: vote_session_path(@conn, :show, vote_session), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: vote_session_path(@conn, :edit, vote_session), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: vote_session_path(@conn, :delete, vote_session), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New vote session", to: vote_session_path(@conn, :new) %>

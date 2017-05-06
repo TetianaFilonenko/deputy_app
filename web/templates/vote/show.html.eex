@@ -1,0 +1,23 @@
+<h2>Show vote</h2>
+
+<ul>
+
+  <li>
+    <strong>Result:</strong>
+    <%= @vote.result %>
+  </li>
+
+  <li>
+    <strong>Deputy:</strong>
+    <%= @vote.deputy_id %>
+  </li>
+
+  <li>
+    <strong>Vote session:</strong>
+    <%= @vote.vote_session_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: vote_path(@conn, :edit, @vote) %>
+<%= link "Back", to: vote_path(@conn, :index) %>

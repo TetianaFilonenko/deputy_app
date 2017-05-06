@@ -1,0 +1,13 @@
+<h2>Show voting file</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @voting_file.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: voting_file_path(@conn, :edit, @voting_file) %>
+<%= link "Back", to: voting_file_path(@conn, :index) %>

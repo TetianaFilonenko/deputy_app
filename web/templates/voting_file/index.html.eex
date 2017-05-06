@@ -1,0 +1,26 @@
+<h2>Listing voting files</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for voting_file <- @voting_files do %>
+    <tr>
+      <td><%= voting_file.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: voting_file_path(@conn, :show, voting_file), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: voting_file_path(@conn, :edit, voting_file), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: voting_file_path(@conn, :delete, voting_file), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New voting file", to: voting_file_path(@conn, :new) %>

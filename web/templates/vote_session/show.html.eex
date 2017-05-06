@@ -1,0 +1,18 @@
+<h2>Show vote session</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @vote_session.name %>
+  </li>
+
+  <li>
+    <strong>File:</strong>
+    <%= @vote_session.file_id %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: vote_session_path(@conn, :edit, @vote_session) %>
+<%= link "Back", to: vote_session_path(@conn, :index) %>

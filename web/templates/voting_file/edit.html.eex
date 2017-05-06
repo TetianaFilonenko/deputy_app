@@ -1,0 +1,6 @@
+<h2>Edit voting file</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: voting_file_path(@conn, :update, @voting_file) %>
+
+<%= link "Back", to: voting_file_path(@conn, :index) %>
