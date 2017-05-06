@@ -1,0 +1,6 @@
+<h2>Edit deputy</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: deputy_path(@conn, :update, @deputy) %>
+
+<%= link "Back", to: deputy_path(@conn, :index) %>

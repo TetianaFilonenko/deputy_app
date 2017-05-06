@@ -1,0 +1,26 @@
+<h2>Listing deputies</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for deputy <- @deputies do %>
+    <tr>
+      <td><%= deputy.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: deputy_path(@conn, :show, deputy), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: deputy_path(@conn, :edit, deputy), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: deputy_path(@conn, :delete, deputy), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New deputy", to: deputy_path(@conn, :new) %>

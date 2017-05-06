@@ -1,0 +1,13 @@
+<h2>Show deputy</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @deputy.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: deputy_path(@conn, :edit, @deputy) %>
+<%= link "Back", to: deputy_path(@conn, :index) %>
