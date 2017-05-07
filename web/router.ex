@@ -21,6 +21,7 @@ defmodule DeputyApp.Router do
     resources "/voting_files", VotingFileController
     resources "/vote_sessions", VoteSessionController
     resources "/votes", VoteController
+    get "/likeliness/:deputy_id", PageController, :likeliness
   end
 
   # Other scopes may use custom stacks.
