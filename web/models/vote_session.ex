@@ -3,7 +3,7 @@ defmodule DeputyApp.VoteSession do
 
   schema "vote_sessions" do
     field :name, :string
-    belongs_to :file, DeputyApp.File
+    belongs_to :file, DeputyApp.VotingFile
 
     timestamps()
   end

@@ -3,7 +3,7 @@ defmodule DeputyApp.VotingFile do
 
   schema "voting_files" do
     field :name, :string
-    has_many :votes, HelloPhoenix.Vote
+    has_many :votes, DeputyApp.VoteSession
     timestamps()
   end
 

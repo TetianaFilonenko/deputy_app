@@ -39,5 +39,4 @@ config :deputy_app, DeputyApp.Repo,
   username: "postgres",
   password: "postgres",
   database: "deputy_app_dev",
-  hostname: "localhost",
-  pool_size: 10
+  hostname: "localhost"
