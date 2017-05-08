@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :deputy_app, DeputyApp.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "docker",
+  password: "docker",
   database: "deputy_app_dev",
   hostname: "localhost"
